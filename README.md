@@ -354,8 +354,3 @@ For issues and questions:
 - [Lucide](https://lucide.dev) - Icons
 - [React](https://react.dev) - Frontend framework
 
----
-
-**Built with ❤️ for farmers and buyers**
-author: phillip kioko kimonyi, student plp july 2025 cohort
-Happy farming! 🌾
