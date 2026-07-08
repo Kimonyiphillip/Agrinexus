@@ -2,7 +2,7 @@ export const GREEN = "#2D6A4F";
 export const AMBER = "#F4A261";
 
 export const USE_MOCK = false; // set false to hit live PHP API
-export const API_BASE_URL = "http://localhost/agrinexus";
+export const API_BASE_URL = "http://localhost:8000";
 
 export const FARMER_NAV = [
   { id: "farmer-dashboard",    label: "Overview",           iconName: "LayoutDashboard" },
