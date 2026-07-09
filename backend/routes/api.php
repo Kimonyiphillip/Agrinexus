@@ -8,6 +8,7 @@ require_once __DIR__ . '/../controllers/OrderController.php';
 require_once __DIR__ . '/../controllers/WeatherController.php';
 require_once __DIR__ . '/../controllers/MarketController.php';
 require_once __DIR__ . '/../controllers/IoTController.php';
+require_once __DIR__ . '/../controllers/AIChatController.php';
 
 function dispatch(string $method, string $path): void {
     // Strip leading /api and trailing slash
@@ -31,10 +32,6 @@ function dispatch(string $method, string $path): void {
     if ($method === 'DELETE'&& preg_match('#^products/(\d+)$#', $path, $m)) { ProductController::destroy((int)$m[1]); return; }
 
     // Order routes
-    // if ($method === 'GET'   && $path === 'orders')              { OrderController::index();  return; }
-    // if ($method === 'GET'   && preg_match('#^orders/(\d+)$#', $path, $m)) { OrderController::show((int)$m[1]); return; }
-    // if ($method === 'PATCH' && preg_match('#^orders/(\d+)/status$#', $path, $m)) { OrderController::updateStatus((int)$m[1]); return; }
-    // Order routes
 if ($method === 'GET'   && $path === 'orders')    { OrderController::index();  return; }
 if ($method === 'POST'  && $path === 'orders')    { OrderController::store();  return; } // ADD THIS
 if ($method === 'GET'   && preg_match('#^orders/(\d+)$#', $path, $m)) { OrderController::show((int)$m[1]); return; }
@@ -56,6 +53,12 @@ if ($method === 'PATCH' && preg_match('#^orders/(\d+)/status$#', $path, $m)) { O
     if ($method === 'GET'   && $path === 'iot/latest')          { IoTController::latestReadings(); return; }
     if ($method === 'GET'   && $path === 'iot/alerts')          { IoTController::alerts();         return; }
     if ($method === 'POST'  && $path === 'iot/ingest')          { IoTController::ingest();         return; }
+
+    // AI Chat routes
+    if ($method === 'POST'  && $path === 'ai/chat')             { AIChatController::chat();           return; }
+    if ($method === 'GET'   && $path === 'ai/providers')        { AIChatController::providers();      return; }
+    if ($method === 'POST'  && $path === 'ai/predict-weather')  { AIChatController::predictWeather(); return; }
+    if ($method === 'POST'  && $path === 'ai/analyze-market')   { AIChatController::analyzeMarket();  return; }
 
     // No match
     require_once __DIR__ . '/../utils/Response.php';

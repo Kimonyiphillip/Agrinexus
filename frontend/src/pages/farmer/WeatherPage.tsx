@@ -4,6 +4,8 @@ import { DashboardLayout } from "@/layouts/DashboardLayout";
 import { CurrentWeatherCard } from "@/components/weather/CurrentWeatherCard";
 import { ForecastStrip } from "@/components/weather/ForecastStrip";
 import { HourlyWeatherChart } from "@/components/charts/HourlyWeatherChart";
+import { WeatherPredictionCard } from "@/components/ai/WeatherPredictionCard";
+import { ChatFAB } from "@/components/ai/ChatFAB";
 import { Droplets, AlertTriangle, Leaf } from "lucide-react";
 import { useWeather } from "@/hooks/useWeather";
 
@@ -23,6 +25,9 @@ export function WeatherPage() {
           </h2>
           <ForecastStrip />
         </div>
+
+        {/* AI Weather Prediction */}
+        <WeatherPredictionCard />
 
         <div>
           <h2 className="font-bold text-foreground mb-4" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
@@ -74,6 +79,9 @@ export function WeatherPage() {
           <HourlyWeatherChart />
         </div>
       </div>
+
+      {/* Floating AI Chat Button */}
+      <ChatFAB context="weather" />
     </DashboardLayout>
   );
 }

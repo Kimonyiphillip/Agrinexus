@@ -1,6 +1,6 @@
 import {
   LayoutDashboard, Package, ShoppingCart, Cpu, CloudSun, TrendingUp,
-  Settings, LogOut, Heart,
+  Settings, LogOut, Heart, Bot,
 } from "lucide-react";
 import { Leaf } from "lucide-react";
 import { cn } from "@/utils/cn";
@@ -8,7 +8,7 @@ import { GREEN, AMBER, FARMER_NAV, BUYER_NAV } from "@/utils/constants";
 import { useAuth } from "@/context/AuthContext";
 
 const ICON_MAP: Record<string, React.ElementType> = {
-  LayoutDashboard, Package, ShoppingCart, Cpu, CloudSun, TrendingUp, Heart,
+  LayoutDashboard, Package, ShoppingCart, Cpu, CloudSun, TrendingUp, Heart, Bot,
 };
 
 export function Sidebar() {

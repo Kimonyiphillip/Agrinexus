@@ -8,6 +8,7 @@ import { BuyerDashboard }         from "@/pages/buyer/BuyerDashboard";
 import { IoTMonitor }             from "@/pages/farmer/IoTMonitor";
 import { WeatherPage }            from "@/pages/farmer/WeatherPage";
 import { AIMarketPage }           from "@/pages/farmer/AIMarketPage";
+import { AIAssistantPage }        from "@/pages/farmer/AIAssistantPage";
 import { ProductManagementPage }  from "@/pages/farmer/ProductManagementPage";
 import { ProductListingPage }     from "@/pages/buyer/ProductListingPage";
 import { OrderManagementPage }    from "@/pages/buyer/OrderManagementPage";
@@ -24,6 +25,7 @@ function Router() {
     "iot-monitor":        <IoTMonitor />,
     weather:              <WeatherPage />,
     "ai-market":          <AIMarketPage />,
+    "ai-assistant":       <AIAssistantPage />,
     "product-management": <ProductManagementPage />,
     "product-listing":    <ProductListingPage />,
     orders:               <OrderManagementPage />,

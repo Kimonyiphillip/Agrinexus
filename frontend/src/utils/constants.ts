@@ -1,5 +1,7 @@
 export const GREEN = "#2D6A4F";
 export const AMBER = "#F4A261";
+export const GEMINI_BLUE = "#4285F4";
+export const DEEPSEEK_PURPLE = "#7C3AED";
 
 export const USE_MOCK = false; // set false to hit live PHP API
 export const API_BASE_URL = "http://localhost:8000";
@@ -11,6 +13,7 @@ export const FARMER_NAV = [
   { id: "iot-monitor",         label: "IoT Farm Monitor",   iconName: "Cpu"             },
   { id: "weather",             label: "Weather Forecast",   iconName: "CloudSun"        },
   { id: "ai-market",           label: "AI Market Analysis", iconName: "TrendingUp"      },
+  { id: "ai-assistant",        label: "AI Assistant",       iconName: "Bot"             },
 ];
 
 export const BUYER_NAV = [

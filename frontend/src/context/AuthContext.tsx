@@ -6,7 +6,7 @@ type Role = "farmer" | "buyer" | null;
 type Page =
   | "landing" | "login"
   | "farmer-dashboard" | "buyer-dashboard"
-  | "iot-monitor" | "weather" | "ai-market"
+  | "iot-monitor" | "weather" | "ai-market" | "ai-assistant"
   | "product-listing" | "product-management" | "orders";
 
 interface User {
